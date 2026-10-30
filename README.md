@@ -19,8 +19,6 @@ Our mission is to reduce the time required to find blood donors during emergenci
 - [System Workflow](#-system-workflow)
 - [Future Enhancements](#-future-enhancements)
 - [Team Members](#-team-members)
-- [Getting Started](#-getting-started)
-- [Contributing](#-contributing)
 
 ---
 
@@ -280,23 +278,7 @@ Start the backend and frontend services according to the project's setup instruc
 
 ---
 
-## 🤝 Contributing
 
-We welcome contributions and suggestions that can improve this project.
-
-1. Fork the repository.
-2. Create a new feature branch.
-3. Make your changes.
-4. Commit your changes.
-5. Push your branch.
-6. Create a Pull Request.
-
-```bash
-git checkout -b feature/your-feature-name
-git add .
-git commit -m "Add: your feature description"
-git push origin feature/your-feature-name
-```
 
 ---
 
