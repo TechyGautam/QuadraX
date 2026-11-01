@@ -12,13 +12,13 @@ Our mission is to reduce the time required to find blood donors during emergenci
 
 - [About the Project](#-about-the-project)
 - [Why This Project?](#-why-this-project)
-- [How It Works](#-how-it-works)
+- [How It Works](#%EF%B8%8F-how-it-works)
 - [Key Features](#-key-features)
 - [Smart Donor Matching](#-smart-donor-matching)
 - [Privacy and Security](#-privacy-and-security)
 - [System Workflow](#-system-workflow)
 - [Future Enhancements](#-future-enhancements)
-- [Team Members](#-team-members)
+- [Team Members](#%E2%80%8D-team-members)
 
 ---
 
@@ -168,6 +168,25 @@ Considers the time elapsed since the donor's last donation.
 The final ranking helps prioritize suitable donors rather than simply displaying a list of registered users.
 
 *Note: The project's initial three-month screening rule is a software filter, not a medical clearance. Actual donation eligibility must be confirmed by qualified medical personnel and applicable blood-bank guidelines.*
+
+---
+
+## 🩸 Blood Group Compatibility
+
+The following table shows red blood cell donation compatibility:
+
+| Blood Group | Can Donate To |
+|-------------|---------------|
+| A+ | A+, AB+ |
+| A- | A+, A-, AB+, AB- |
+| B+ | B+, AB+ |
+| B- | B+, B-, AB+, AB- |
+| AB+ | AB+ |
+| AB- | AB+, AB- |
+| O+ | O+, A+, B+, AB+ |
+| O- | O-, O+, A-, A+, B-, B+, AB-, AB+ |
+
+**Note:** This table represents red blood cell compatibility. Actual donor eligibility and compatibility must be confirmed through medical screening and blood bank testing.
 
 ---
 
