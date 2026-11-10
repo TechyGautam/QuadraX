@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuadraX - Blood Donor Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        /* ----- NAVBAR ----- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 5%;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #e43f5a;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .btn-login {
+            background: transparent;
+            color: #f8fafc;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-login:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-register {
+            background: #e43f5a;
+            color: #ffffff;
+        }
+
+        .btn-register:hover {
+            background: #c72c41;
+            box-shadow: 0 4px 12px rgba(228, 63, 90, 0.3);
+        }
+
+        /* ----- MAIN CONTENT ----- */
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: radial-gradient(circle at center, rgba(228, 63, 90, 0.12) 0%, transparent 60%);
+        }
+
+        .badge {
+            background: rgba(228, 63, 90, 0.15);
+            color: #e43f5a;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(228, 63, 90, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            max-width: 700px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8;
+            max-width: 550px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .hero-btn {
+            padding: 14px 32px;
+            font-size: 16px;
+        }
+
+        /* ----- FOOTER ----- */
+        .footer {
+            background: #090d16;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #f8fafc;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 15px;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/" class="logo">
+            🩸 Quadra<span>X</span>
+        </a>
+        <div class="nav-buttons">
+            <form action="/login" method="get" style="display: inline;">
+                <button type="submit" class="btn btn-login">Login</button>
+            </form>
+            <form action="/RegisterPage" method="get" style="display: inline;">
+                <button type="submit" class="btn btn-register">Register</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Main Hero Section -->
+    <main class="hero">
+        <div class="badge">Connecting Donors & Patients</div>
+        <h1>Save Lives By Finding Blood Donors Near You</h1>
+        <p>QuadraX connects blood donors with people in urgent need. Register today to become a donor or request blood when required.</p>
+        
+        <form action="/RegisterPage" method="get">
+            <button type="submit" class="btn btn-register hero-btn">Get Started Now</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 QuadraX. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+</body>
+</html>

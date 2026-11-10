@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuadraX - OTP Verification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #0f172a;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(228, 63, 90, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(31, 64, 104, 0.3) 0px, transparent 50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            padding: 40px 32px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(228, 63, 90, 0.1);
+            color: #e43f5a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 20px auto;
+            border: 1px solid rgba(228, 63, 90, 0.2);
+        }
+
+        h2 {
+            color: #f8fafc;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .otp-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .otp-box input[type="text"] {
+            width: 100%;
+            height: 54px;
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 6px;
+            font-weight: 600;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #f8fafc;
+            transition: all 0.2s ease;
+        }
+
+        .otp-box input::placeholder {
+            font-size: 16px;
+            letter-spacing: normal;
+            color: #64748b;
+            font-weight: 400;
+        }
+
+        .otp-box input:focus {
+            outline: none;
+            border-color: #e43f5a;
+            box-shadow: 0 0 0 3px rgba(228, 63, 90, 0.15);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: #e43f5a;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(228, 63, 90, 0.3);
+        }
+
+        .btn:hover {
+            background: #c72c41;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(228, 63, 90, 0.4);
+        }
+
+        .resend {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .resend a {
+            color: #e43f5a;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .resend a:hover {
+            color: #ff4d6d;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="icon-box">✉️</div>
+    <h2>OTP Verification</h2>
+    <p>We have sent a 6-digit verification code to your registered email address.</p>
+
+    <form method="post" action="/VerifyOTPRequest">
+        <div class="otp-box">
+            <!-- Hidden email passed securely from backend context -->
+            <input type="hidden" name="email" value="{{ email }}">
+            <input type="text" maxlength="6" placeholder="Enter 6-digit OTP" name="userOTP" autocomplete="off" required>
+        </div>
+
+        <button class="btn" type="submit">Verify OTP</button>
+    </form>
+</div>
+
+</body>
+</html>

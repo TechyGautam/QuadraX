@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Aarav Sharma",
+        "age": 20,
+        "email": "aarav@gmail.com",
+        "course": "Computer Science",
+        "year": 2,
+        "cgpa": 8.5
+    },
+    {
+        "id": 2,
+        "name": "Priya Verma",
+        "age": 21,
+        "email": "priya@gmail.com",
+        "course": "Artificial Intelligence",
+        "year": 3,
+        "cgpa": 9.1
+    },
+    {
+        "id": 3,
+        "name": "Rahul Singh",
+        "age": 19,
+        "email": "rahul@gmail.com",
+        "course": "Information Technology",
+        "year": 1,
+        "cgpa": 7.8
+    },
+    {
+        "id": 4,
+        "name": "Ananya Gupta",
+        "age": 22,
+        "email": "ananya@gmail.com",
+        "course": "Data Science",
+        "year": 4,
+        "cgpa": 8.9
+    },
+    {
+        "id": 5,
+        "name": "Karan Mehta",
+        "age": 20,
+        "email": "karan@gmail.com",
+        "course": "Artificial Intelligence",
+        "year": 2,
+        "cgpa": 7.5
+    }
+]
