@@ -1,0 +1,33 @@
+
+@import "tailwindcss";
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default light theme */
+:root {
+  --bg-primary: #F4F5F7;
+  --bg-card: #FFFFFF;
+  --text-primary: #17191F;
+  --text-secondary: #777E8B;
+  --accent: #F04452;
+  --border-color: #E1E3E8;
+}
+
+/* Dark theme */
+.dark {
+  --bg-primary: #17191F;
+  --bg-card: #242730;
+  --text-primary: #F4F5F7;
+  --text-secondary: #AEB3BE;
+  --accent: #F04452;
+  --border-color: #383C47;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
