@@ -10,24 +10,33 @@
 
 /* Default light theme */
 :root {
-  --bg-primary: #F4F5F7;
+  --bg-primary: #FFF7FA;
   --bg-card: #FFFFFF;
   --text-primary: #17191F;
   --text-secondary: #777E8B;
-  --accent: #F04452;
-  --border-color: #E1E3E8;
+  --accent: #F45B9E;
+  --heading-color:#FF75B5;
+  --tagline-color:#FF82BD;
+  --secondary-button:#FF9AC8;
+  --border-color: #F5D6E5;
 }
 
 /* Dark theme */
 .dark {
-  --bg-primary: #17191F;
-  --bg-card: #242730;
-  --text-primary: #F4F5F7;
-  --text-secondary: #AEB3BE;
-  --accent: #F04452;
-  --border-color: #383C47;
+  --bg-primary: #000000;
+  --bg-card: #111111;
+  --text-primary: #FFFFFF;
+  --text-secondary: #C4C4C4;
+  --accent: #F45B9E;
+  --heading-color:#FF75B5;
+  --tagline-color:#FF82BD;
+  --secondary-button:#FF9AC8;
+  --border-color: #333333;
 }
 
 body {
   font-family: Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color:var(--text-primary);
+  transition: background-color 0.3s ease,color 0.3s ease;
 }
