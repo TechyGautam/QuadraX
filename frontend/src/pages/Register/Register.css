@@ -1,0 +1,42 @@
+:root{
+    --bg-primary: #121016;
+    --bg-card:#1e1926;
+    --border-color:#2e263d;
+    --text-primary:#f1f5f9;
+    --text-secondary:#94a3b8;
+    --accent:#ec4899;
+}
+
+body.light-mode{
+    --bg-primary:#f8fafc;
+    --bg-card:#ffffff;
+    --border-color:#e2e8f0;
+    --text-primary:#0f172a;
+    --text-secondary:#64748b;
+    --accent:#db2777;
+}
+
+.register-card{
+    position: relative;
+    padding-top: 65px !important;
+}
+
+.register-theme-toggle{
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 9999px;
+    background-color: var(--bg-primary);
+    color:var(--accent);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.register-theme-toggle:hover{
+    border-color: va(--accent);
+    background-color: var(--border-color);
+}
+
+body, div, input, select, button{
+    transition: background-color 0.2 ease,color 0.2 ease, border-color 0.2s ease;
+}
