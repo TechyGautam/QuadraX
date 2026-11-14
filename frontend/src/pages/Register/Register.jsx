@@ -61,13 +61,13 @@ function Register() {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center p-4"
-      style={{ backgroundColor: "var(--bg-primary)" }}
+      className="min-h-screen flex items-center justify-center registerpage-bg"
+      style={{ padding:"32px 16px"}}
     >
       <div
-        className="w-full max-w-md rounded-xl shadow-lg"
+        className="w-full max-w-lg rounded-2xl shadow-xl"
         style={{
-          padding : "32px",
+          padding : "40px 36px",
           boxSizing:"border-box",
           backgroundColor: "var(--bg-card)",
           color: "var(--text-primary)",
@@ -75,72 +75,75 @@ function Register() {
         }}
       >
       
-      <div className="text-center mb-6">
-          <h1 className="text-2xl font-bold" style={{ color: "var(--accent)" }}>
+      <div className="text-center" style={{marginBottom:"28px" }}>
+          <h1 className="text-2xl font-semibold tracking-widest uppercase" style={{ color: "var(--accent)", marginBottom:"8px"}}>
             Blood Donor Finder
           </h1>
 
-          <h2 className="text-xl font-semibold mt-2">Create Your Account</h2>
-          <p className="text-sm mt-1" style={{ color: "var(--text-secondary)" }}>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight"style={{color:"var(--text-primary)"}}>Create Your Account</h2>
+          <p className="text-sm mt-1.5" style={{ color: "var(--text-secondary)" }}>
             Join our community and help save lives.
           </p>
         </div>
 
-        <form className="space-y-4" onSubmit={handleSubmit}>
-          <div> 
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div style={{marginBottom:"16px"}}> 
             
-          <label htmlFor="firstName" className="block text-xs font-medium mb-1">First Name</label>
+          <label htmlFor="firstName" className="block text-sm font-semibold mb-1.5" style={{color: "var(--text-primary"}}>First Name</label>
             <input
               type="text"
               id="firstName"
               name="firstName"
               placeholder="Enter first name"
               required
-              className="w-full p-2.5 rounded-lg border outline-none focus:ring-2 focus:ring-red-400 text-sm"
+              className="w-full rounded-lg border outline-none focus:ring-2 focus:ring-red-400 text-sm"
               style={{
                 backgroundColor: "var(--bg-primary)",
                 color: "var(--text-primary)",
                 borderColor: "var(--border-color)",
+                padding:"11px 14px",
               }}
             />
           </div>
 
-          <div>
-            <label htmlFor="lastName" className="block text-xs font-medium mb-1"> Last Name</label>
+          <div style={{marginBottom:"16px" }}>
+            <label htmlFor="lastName" className="block text-sm font-semibold mb-1.5" style={{color: "var(--text-primary)"}}> Last Name</label>
             <input
               type="text"
               id="lastName"
               name="lastName"
               placeholder="Enter last name"
               required
-              className="w-full p-2.5 rounded-lg border outline-none focus:ring-2 focus:ring-red-400 text-sm"
+              className="w-full rounded-lg border outline-none focus:ring-2 focus:ring-red-400 text-sm"
               style={{
                 backgroundColor: "var(--bg-primary)",
                 color: "var(--text-primary)",
                 borderColor: "var(--border-color)",
+                padding:"11px 14px"
               }}
             />
           </div> 
 
-            <div>
-            <label htmlFor="email" className="block text-xs font-medium mb-1">Email Address</label>
+            <div style={{marginBottom:"16px"}}>
+            <label htmlFor="email" className="block text-sm font-semibold mb-1.5"style={{color:"var(--text-primary"}}>Email Address</label>
             <input
               type="email"
               id="email"
               name="email"
               placeholder="name@example.com"
               required
-              className="w-full p-2.5 rounded-lg border outline-none focus:ring-2 focus:ring-red-400 text-sm"
+              className="w-full rounded-lg border outline-none focus:ring-2 focus:ring-red-400 text-sm"
               style={{
                 backgroundColor: "var(--bg-primary)",
                 color: "var(--text-primary)",
                 borderColor: "var(--border-color)",
+                padding:"11px 14px",
               }}
             />
           </div>
 
-          <div>
-            <label htmlFor="mobile" className="block text-sm mb-1">Mobile Number</label>
+          <div style={{marginBottom:"16px" }}>
+            <label htmlFor="mobile" className="block text-sm font-semibold mb-1.5"style={{color:"var(--text-primary)"}}>Mobile Number</label>
             <input
               type="tel"
               id="mobile"
@@ -153,22 +156,24 @@ function Register() {
                 backgroundColor: "var(--bg-primary)",
                 color: "var(--text-primary)",
                 borderColor: "var(--border-color)",
+                padding:"11px 14px",
               }}
             />
             {errors.mobile && (<p className="text-xs mt-1 text-red-500">{errors.mobile}</p>)}
           </div>
           
-          <div>
-            <label htmlFor="bloodGroup" className="block text-sm mb-1">Blood Group</label>
+          <div style={{marginBottom:"16px" }}>
+            <label htmlFor="bloodGroup" className="block text-sm font-semibold mb-1.5"style={{color:"var(--text-primary)"}}>Blood Group</label>
              <select id="bloodGroup" 
              name="bloodGroup" 
              required 
              defaultValue=""
-             className="w-full p-2.5 rounded-lg border outline-none focus:ring-2 focus:ring-red-400 text-sm"
+             className="w-full rounded-lg border outline-none focus:ring-2 focus:ring-red-400 text-sm"
              style={{
                backgroundColor: "var(--bg-primary)",
                color: "var(--text-primary)",
                borderColor: "var(--border-color)",
+               padding:"11px 14px",
     }}
   >
     <option value="" disabled> Select your blood group</option>
@@ -183,25 +188,26 @@ function Register() {
   </select>
 </div>
 
-<div>
-  <label htmlFor="city" className="block text-xs font-medium mb-1">City</label>
+<div style={{marginBottom:"16px" }}>
+  <label htmlFor="city" className="block text-sm font-semibold mb-1.5"style={{color:"var(--text-primary)"}}>City</label>
   <input 
   type="text" 
   id="city" 
   name="city" 
   placeholder="Enter your city" 
   required 
-  className="w-full p-2.5 rounded-lg border outline-none focus:ring-2 focus:ring-pink-400"
+  className="w-full rounded-lg border outline-none focus:ring-2 focus:ring-red-400"
   style={{
     backgroundColor:"var(--bg-primary)",
     color:"var(--text-primary)",
     borderColor:"var(--border-color)",
+    padding:"11px 14px",
   }} />
 </div>
 
 
-<div>
-  <label htmlFor="pincode" className="block text-xs font-medium mb-1">
+<div style={{marginBottom:"16px"}}>
+  <label htmlFor="pincode" className="block text-sm font-semibold mb-1.5"style={{color:"var(--text-primary)"}}>
     Pincode
     </label>
   <input
@@ -212,17 +218,18 @@ function Register() {
    maxLength={6} 
    inputMode="numeric" 
    required 
-   className="w-full sm:w-1/2 p-2.5 rounded-lg border outline-none focus:ring-2 focus:ring-pink-400 text-sm"
+   className="w-full p-2.5 rounded-lg border outline-none focus:ring-2 focus:ring-red-400 text-sm"
    style={{
     backgroundColor:"var(--bg-primary)",
     color:"var(--text-primary)",
     borderColor:"var(--border-color)",
+    padding:"11px 14px"
   }} />
   {errors.pincode && (<p className = "text-xs mt-1 text-red-500">{errors.pincode}</p>)}
 </div>
 
-  <div> 
-  <label htmlFor="password" className="block text-xs font-medium mb-1"> Password</label>
+  <div style={{marginBottom:"16px"}}> 
+  <label htmlFor="password" className="block text-sm font-semibold mb-1.5"style={{color:"var(--text-primary)"}}> Password</label>
   <div style={{position:"relative"}}>
     <input type={showPassword?"text" : "password"}
               id="password"
@@ -231,18 +238,28 @@ function Register() {
               minLength={8}
               required
               onChange={(e) => checkPasswordStrength(e.target.value)}
-              className="w-full p-2.5 pr-14 rounded-lg border outline-none focus:ring-2 focus:ring-red-400"
+              className="w-full rounded-lg border outline-none focus:ring-2 focus:ring-red-400 text-sm"
               style={{
                 backgroundColor: "var(--bg-primary)",
                 color: "var(--text-primary)",
                 borderColor: "var(--border-color)",
+                padding:"11px 14px",
+                paddingRight:"54px",
               }}
             />
            <button 
             type="button"  
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-sm"
-            style={{color:"var(--text-secondary)"}}>
+            className="text-xs font-medium cursor-pointer"
+            style={{
+              position:"absolute",
+              right:"14px",
+              top:"50%",
+              transform:"translateY(-50%)",
+              color:"var(--text-secondary)",
+              background:"transparent",
+              border:"none"
+            }}>
               {showPassword ? "Hide" : "Show"}
             </button>
           </div>
@@ -254,9 +271,9 @@ function Register() {
           {errors.password && <p className="text-xs mt-1 text-red-500">{errors.password}</p>}
         </div>  
 
-          <div>
-            <label htmlFor="confirmPassword" className="block text-xs font-medium mb-1"> Confirm Password </label>
-            <div className="relative">
+          <div style={{marginBottom:"16px"}}>
+            <label htmlFor="confirmPassword" className="block text-sm font-semibold mb-1.5"style={{color:"var(--text-primary)"}}> Confirm Password </label>
+            <div style={{position:"relative"}}>
             <input 
               type={showConfirmPassword ? "text" : "password"}
               id="confirmPassword"
@@ -264,18 +281,30 @@ function Register() {
               placeholder="Re-enter password"
               minLength={8}
               required
-              className="w-full p-3 pr-16 rounded-lg border outline-none focus:ring-2 focus:ring-red-400"
+              className="w-full rounded-lg border outline-none focus:ring-2 focus:ring-red-400"
               style={{
                 backgroundColor: "var(--bg-primary)",
                 color: "var(--text-primary)",
                 borderColor: "var(--border-color)",
+                padding:"11px 14px",
+                paddingRight: "54px",
               }}
             />
             <button 
               type="button" 
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-xs  font-medium"
-              style={{color: "var(--text-secondary)"}}>
+              className="text-xs font-medium cursor-pointer"
+              style={{
+              position:"absolute",
+              right:"14px",
+              top:"50%",
+              transform:"translateY(-50%)",
+              color:"var(--text-secondary)",
+              background:"transparent",
+              border:"none",
+              outline: "none"
+              }}>
+
               {showConfirmPassword ? "Hide":"Show"}
             </button>
             </div>
@@ -283,8 +312,15 @@ function Register() {
              {errors.confirmPassword && <p className="text-sm mt-1 text-red-500">{errors.confirmPassword}</p>}
           </div>
 
-          <div className="flex items-center gap-2 pt-1">
-            <input type="checkbox" id="terms" name="terms" required className="accent-pink-500 cursor-pointer"/>
+          <div className="flex items-center" style={{gap:"10px",marginTop:"16px",marginBottom:"16px"}}>
+            <input 
+            type="checkbox"
+            id="terms" 
+            name="terms" 
+            required 
+            className="accent-red-500 cursor-pointer"
+            style={{width:"16px",height:"16px"}}
+            />
             <label htmlFor="terms" className="text-xs cursor-pointer" style={{color: "var(--text-secondary)"}}>
               I agree to the <span className="underline">Terms and Conditions</span> 
               </label>
@@ -292,15 +328,15 @@ function Register() {
 
           <button
             type="submit"
-            className="w-full py-3 rounded-lg font-semibold text-white hover:opacity-90 transition duration-200 cursor-pointer text-sm shadow-md"
+            className="w-full rounded-lg font-semibold text-white hover:opacity-90 transition duration-200 cursor-pointer text-sm shadow-md"
             style={{ 
               backgroundColor: "var(--accent)",
-              marginTop:"8px",
+              marginTop:"13px",
              }}
           >Create Account</button>
         </form>
-        <div className="text-center mt-4">
-          <p className="text-xs" style={{color:"var(--text-secondary)"}}>Already have an account?{" "}
+        <div className="text-center"style={{marginTop:"20px"}}>
+          <p className="text-s" style={{color:"var(--text-secondary)"}}>Already have an account?{" "}
             <a href = "/login" className="font-semibold hover:underline" style={{color:"var(--accent)"}}>
             Login
             </a>
