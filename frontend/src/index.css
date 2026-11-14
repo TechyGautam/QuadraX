@@ -1,0 +1,42 @@
+
+@import "tailwindcss";
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default light theme */
+:root {
+  --bg-primary: #FFF7FA;
+  --bg-card: #FFFFFF;
+  --text-primary: #17191F;
+  --text-secondary: #777E8B;
+  --accent: #F45B9E;
+  --heading-color:#FF75B5;
+  --tagline-color:#FF82BD;
+  --secondary-button:#FF9AC8;
+  --border-color: #F5D6E5;
+}
+
+/* Dark theme */
+.dark {
+  --bg-primary: #000000;
+  --bg-card: #111111;
+  --text-primary: #FFFFFF;
+  --text-secondary: #C4C4C4;
+  --accent: #F45B9E;
+  --heading-color:#FF75B5;
+  --tagline-color:#FF82BD;
+  --secondary-button:#FF9AC8;
+  --border-color: #333333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color:var(--text-primary);
+  transition: background-color 0.3s ease,color 0.3s ease;
+}
